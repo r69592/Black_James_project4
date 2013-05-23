@@ -1,0 +1,153 @@
+/*
+Daily Chores
+James Black
+VFW : 1305
+*/
+body {
+    
+    background-image: linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
+    background-image: -o-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
+    background-image: -moz-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
+    background-image: -webkit-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
+    background-image: -ms-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, #56A6EC),
+        color-stop(0.5, #7BB5E8),
+        color-stop(1, #56A6EC)
+);}
+/* This is for my index page. */    
+p {
+    font-family: serif;
+    font-size: large;
+    color: #9afeff;
+}
+h1 {
+    margin: none;
+    font-family: Garamond, sans-serif,serif;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: grey;
+    font-size: 30px;
+    color: #9afeff;
+    padding:  13px;
+    height: 8px;
+    background-color: none;
+    text-transform: none;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 2px;
+
+/* This is for all other pages. */    
+}
+li {
+    color: #9afeff;
+}
+legend {
+    font-family: Garamond, sans-serif, times;
+    color: #52f3ff;
+}
+
+fieldset {
+    border: 2px dashed white;
+}
+#select {
+    color: #9afeff;
+}
+
+#saveButton {
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: auto; 
+    color: black; 
+    background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -moz-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -webkit-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -ms-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.18, #52F3FF),
+        color-stop(0.49, #56A6EC),
+        color-stop(0.9, #9AFDFF)
+    );
+}
+#errors li {
+    color: red;
+}
+#addItem {
+    position: middle;
+    margin-left: auto;
+    margin-right: auto; 
+    color: black; 
+    background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -moz-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -webkit-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -ms-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.18, #52F3FF),
+        color-stop(0.49, #56A6EC),
+        color-stop(0.9, #9AFDFF)
+    );
+}
+#clearStorage {
+    color: black; 
+    background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -moz-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -webkit-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -ms-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.18, #52F3FF),
+        color-stop(0.49, #56A6EC),
+        color-stop(0.9, #9AFDFF)
+    );
+}
+#displayData{
+    color: black; 
+    background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -moz-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -webkit-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -ms-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.18, #52F3FF),
+        color-stop(0.49, #56A6EC),
+        color-stop(0.9, #9AFDFF)
+    );
+}
+#addNewChore {
+    color: black; 
+    background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -moz-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -webkit-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+    background-image: -ms-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.18, #52F3FF),
+        color-stop(0.49, #56A6EC),
+        color-stop(0.9, #9AFDFF)
+    );

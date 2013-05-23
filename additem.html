@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+VFW Project: Chore List
+       Name: James Black
+       Term: 1305
+-->
+<html>
+<head>
+    <!-- character set meta -->
+    <meta charset="utf-8" />
+    <meta name="description" content="First to do app." />
+    <meta name="keywords" content="to do, web app, mobile development" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <!--Document Title --> 
+    <title>Daily Chores</title>
+    <!-- Link CSS -->
+    <Link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <h1>Chore List </h1>
+
+    <!-- This is my link section! -->
+    <nav>
+        <input type="button" id="clearStorage" value="clear stored data" onClick="window.location.href='#'">
+        <input type="button" id="displayData"  value="display data"      onClick="window.location.href='#'">
+        <input type="button" id="addNewChore"  value="Add New Chore"     style="display: none;" onClick="window.location.href='addItem.html'">
+    </nav>
+        
+    <!-- This starts my form with all buttons,radios,selectBox,etc. -->    
+    <form action="#" method="post" id="choreForm">
+
+        <fieldset id="fSet">
+            <legend>Chore Information</legend>
+            <span>* fields are required</span>
+            <ul id="errors"></ul>
+            <ul id="choreList">    
+                <li>
+                    <label for="chore">* Description: </label>
+                    <input type="text" id="chore" placeholder="Place text here" />
+                </li>
+                <br />
+
+                <li>
+                    <label for="group" id="select">* Add Chore Type:</label>
+                </li>
+                    
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Questions</legend>
+                    <ul>
+                        <li>Difficulty
+                            <ul>
+
+                                <li><input type="radio" checked value="Easy" id="easy" name="difficulty" /><label for="easy">Easy</label></li>
+
+                                <li><input type="radio" value="Medium" id="medium" name="difficulty" /><label for="medium">Medium</label></li>
+
+                                <li><input type="radio" value="Hard" id="hard" name="difficulty" /><label for="hard">hard</label></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                     
+                    <ul>
+                        <li>Importance 
+                            <ul>
+
+                                <li><input type="range" id="importance" min="1" max="10" value="" /></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+               
+                    <ul>
+                        <li>Completion Date
+                            <ul>
+
+                                <li><input type="date" id="choreDate" /></li>
+
+                            </ul>
+                        </li>
+                    </ul>        
+               
+                    <ul>
+
+                        <li><label for="notes">Notes<br /></label>
+                        <textarea id="notes" value="" placeholder="Please enter all notes here."></textarea></li>
+
+                        <li><input type="hidden" value="true" /></li>
+
+                    </ul> 
+
+        </fieldset>
+        
+        <input type="button" id="saveButton" value="Save" />
+        
+    </form>
+        
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
