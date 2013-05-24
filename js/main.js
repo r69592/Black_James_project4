@@ -63,35 +63,59 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
        
-    // Show storage.
+    // Get Data function.
     function showData(){
-        toggleControls("on");
-        var makeDiv = document.createElement("div");
-        makeDiv.setAttribute("id", "items");
-        var makeList = document.createElement("ul");
-        makeDiv.appendChild(makeList);
-        document.body.appendChild(makeDiv);
-        ge("items").style.display = "block";
-        for (var i=0, len=localStorage.length; i<len; i++) {
-            var makeLi = document.createElement("li");
-            var linksLi =document.createElement("li");
-            makeList.appendChild(makeLi);
-            var key = localStorage.key(i);
-            var value = localStorage.getItem(key);
-            var obj = JSON.parse(value);
-            var makeSublist = document.createElement("ul");
-            makeLi.appendChild(makeSublist);
-            for (var n in obj) {
-                var makeSubli = document.createElement("li");
-                makeSublist.appendChild(makeSubli);
-                var optSubText = obj[n][0]+" "+obj[n][1];
-                makeSubli.innerHTML = optSubText;
-                makeSublist.appendChild(linksLi);
+        if (localStorage.length === 0){
+            alert("There is nothing to display so default data was added.");
+            autoFillData();
+        }else{
+            toggleControls("on");
+            var makeDiv = document.createElement("div");
+            makeDiv.setAttribute("id", "items");
+            var makeList = document.createElement("ul");
+            makeDiv.appendChild(makeList);
+            document.body.appendChild(makeDiv);
+            ge("items").style.display = "block";
+            for (var i=0, len=localStorage.length; i<len; i++) {
+                var makeLi = document.createElement("li");
+                var linksLi =document.createElement("li");
+                makeList.appendChild(makeLi);
+                var key = localStorage.key(i);
+                var value = localStorage.getItem(key);
+                var obj = JSON.parse(value);
+                var makeSublist = document.createElement("ul");
+                makeLi.appendChild(makeSublist);
+                getImage(obj.item[1], makeSublist);
+                for (var n in obj) {
+                    var makeSubli = document.createElement("li");
+                    makeSublist.appendChild(makeSubli);
+                    var optSubText = obj[n][0]+" "+obj[n][1];
+                    makeSubli.innerHTML = optSubText;
+                    makeSublist.appendChild(linksLi);
+                }
+                makeItemLinks(localStorage.key(i), linksLi); 
             }
-            makeItemLinks(localStorage.key(i), linksLi); 
         }
     }
     
+    // Get image for each location.
+    function getImage(catName, makeSublist){
+        var imageLi = document.createElement("li");
+        makeSublist.appendChild(imageLi);
+        var newImage = document.createElement("img");
+        var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
+        imageLi.appendChild(newImg);
+        console.log(setSrc);
+    }
+
+    // JSON object Auto Fill
+    function autoFillData () {
+        // My JSON auto fill function.
+        for(var n in json){
+            var id = Math.floor(Math.random()*1000001);
+            localStorage.setItem(id, JSON.stringify(json[n]));
+        }
+    }
 
     // Make Item Links.
     function makeItemLinks(key, linksLi){
@@ -210,12 +234,12 @@ window.addEventListener("DOMContentLoaded", function() {
         }
         getSelectedRadio();
         var item            = {};
-            item.chore      = ["Chore", ge("chore").value];
-            item.area       = ["Chore Location", ge("area").value];
-            item.difficulty = ["difficulty", difficultyValue];
-            item.importance = ["importance", ge("importance").value];
-            item.choreDate  = ["Chore Date", ge("choreDate").value];
-            item.notes      = ["Notes", ge("notes").value];
+            item.chore      = ["Chore :", ge("chore").value];
+            item.area       = ["Chore Location :", ge("area").value];
+            item.difficulty = ["difficulty :", difficultyValue];
+            item.importance = ["importance :", ge("importance").value];
+            item.choreDate  = ["Chore Date :", ge("choreDate").value];
+            item.notes      = ["Notes :", ge("notes").value];
             localStorage.setItem(id, JSON.stringify(item));
             alert("Chore Saved!");
     }
