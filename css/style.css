@@ -4,20 +4,8 @@ James Black
 VFW : 1305
 */
 body {
-    
-    background-image: linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
-    background-image: -o-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
-    background-image: -moz-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
-    background-image: -webkit-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
-    background-image: -ms-linear-gradient(bottom, #56A6EC 0%, #7BB5E8 50%, #56A6EC 100%);
-
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, #56A6EC),
-        color-stop(0.5, #7BB5E8),
-        color-stop(1, #56A6EC)
+    background-color: #33CCFF;
+    margin: none;
 );}
 /* This is for my index page. */    
 p {
@@ -26,23 +14,22 @@ p {
     color: #9afeff;
 }
 h1 {
-    margin: none;
+    
+    padding: 13px;
+    background-color: gray;
     font-family: Garamond, sans-serif,serif;
     text-decoration: none;
     text-align: center;
-    text-shadow: grey;
-    font-size: 30px;
     color: #9afeff;
-    padding:  13px;
     height: 8px;
-    background-color: none;
-    text-transform: none;
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 2px;
-
-/* This is for all other pages. */    
+    
 }
+
+/* This is for all other pages. */
+
 li {
     color: #9afeff;
 }
@@ -53,6 +40,7 @@ legend {
 
 fieldset {
     border: 2px solid white;
+    background-color: #33B8FF;
 }
 #select {
     color: #9afeff;
@@ -80,11 +68,10 @@ fieldset {
 }
 #errors li {
     color: red;
+    font-size: 16px;
 }
 #addItem {
-    position: middle;
-    margin-left: auto;
-    margin-right: auto; 
+    
     color: black; 
     background-image: linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
     background-image: -o-linear-gradient(bottom, #52F3FF 18%, #56A6EC 49%, #9AFDFF 90%);
@@ -151,7 +138,3 @@ fieldset {
         color-stop(0.49, #56A6EC),
         color-stop(0.9, #9AFDFF)
     );
-#items  {
-    font-family: cursive;
-    color: black;
-}

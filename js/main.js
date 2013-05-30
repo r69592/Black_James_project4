@@ -84,8 +84,14 @@ window.addEventListener("DOMContentLoaded", function() {
                 var value = localStorage.getItem(key);
                 var obj = JSON.parse(value);
                 var makeSublist = document.createElement("ul");
+                makeSublist.setAttribute("id", "displayList");
+                makeList.style.backgroundColor = "#33B8FF";
+
+                var breakTag = document.createElement("br");
+                makeList.appendChild(breakTag);
+
                 makeLi.appendChild(makeSublist);
-                getImage(obj.item[1], makeSublist);
+                getImage(obj.area[1], makeSublist);
                 for (var n in obj) {
                     var makeSubli = document.createElement("li");
                     makeSublist.appendChild(makeSubli);
@@ -103,9 +109,8 @@ window.addEventListener("DOMContentLoaded", function() {
         var imageLi = document.createElement("li");
         makeSublist.appendChild(imageLi);
         var newImage = document.createElement("img");
-        var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
-        imageLi.appendChild(newImg);
-        console.log(setSrc);
+        var setSrc = newImage.setAttribute("src", "images/"+ catName + ".png");
+        imageLi.appendChild(newImage);
     }
 
     // JSON object Auto Fill
@@ -138,7 +143,8 @@ window.addEventListener("DOMContentLoaded", function() {
         deleteLink.innerHTML = deleteText;
         linksLi.appendChild(deleteLink);
 
-    }   
+    }  
+
 
     // My edit item link function....
     function editItem (){
